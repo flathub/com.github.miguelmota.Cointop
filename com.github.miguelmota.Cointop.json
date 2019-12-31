@@ -28,7 +28,7 @@
         {
           "type": "script",
           "commands": [
-            ". /app/bin/scripts/my_enable.sh; cd /app/go/src/$1; go build -o x"
+            ". /app/bin/scripts/my_enable.sh; cd /app/go/src/$1; GO111MODULE=off go build -o x"
             ],
             "dest-filename": "build.sh"
         }
