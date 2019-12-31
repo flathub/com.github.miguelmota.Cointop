@@ -21,7 +21,7 @@
         {
           "type": "script",
           "commands": [
-            ". /usr/lib/sdk/golang/enable.sh;  export GOPATH=/app/go"
+            ". /usr/lib/sdk/golang/enable.sh; export GOPATH=/app/go"
             ],
             "dest-filename": "my_enable.sh"
         },
@@ -35,7 +35,7 @@
       ],
       "buildsystem": "simple",
       "build-commands": [
-        "mkdir -p /app/go/{src,pkg,bin} # make go workspace",
+        "mkdir -p /app/go/{src,pkg,bin}",
         "install -d /app/bin/scripts",
         "cp *.sh /app/bin/scripts/"
       ]
