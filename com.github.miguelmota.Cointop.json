@@ -59,8 +59,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/miguelmota/cointop/archive/1.4.6.tar.gz",
-          "sha256": "69391a7c6f3a920c175685b9917086d449f4c1ff72c5b98ab08118489f15c0a9",
+          "url": "https://github.com/miguelmota/cointop/archive/v1.5.4.tar.gz",
+          "sha256": "9d6d11e71c3c754a654b191a6813a41427c717966999ce335f0f155358a2292b",
           "dest": "go/src/github.com/miguelmota/cointop"
         }
       ]
