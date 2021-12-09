@@ -1,7 +1,7 @@
 {
   "app-id": "com.github.miguelmota.Cointop",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
+  "runtime-version": "20.08",
   "sdk": "org.freedesktop.Sdk",
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.golang"
@@ -28,7 +28,7 @@
         {
           "type": "script",
           "commands": [
-            ". /app/bin/scripts/my_enable.sh; cd /app/go/src/$1; GO111MODULE=off go build -ldflags \"-s -w -X github.com/miguelmota/cointop/cointop.version=v1.6.5\" -o x"
+            ". /app/bin/scripts/my_enable.sh; cd /app/go/src/$1; GO111MODULE=off go build -ldflags \"-s -w -X github.com/cointop-sh/cointop/cointop.version=v1.6.10\" -o x"
             ],
             "dest-filename": "build.sh"
         }
@@ -45,31 +45,31 @@
       "buildsystem": "simple",
       "build-commands": [
         "cp -rpv go/* /app/go/",
-        "/app/bin/scripts/build.sh github.com/miguelmota/cointop",
-        "install -D /app/go/src/github.com/miguelmota/cointop/x /app/bin/cointop",
+        "/app/bin/scripts/build.sh github.com/cointop-sh/cointop",
+        "install -D /app/go/src/github.com/cointop-sh/cointop/x /app/bin/cointop",
         "mkdir -p /app/share/icons/hicolor/64x64/apps",
         "mkdir -p /app/share/icons/hicolor/128x128/apps",
         "mkdir -p /app/share/applications",
         "mkdir -p /app/share/metainfo",
-        "cp /app/go/src/github.com/miguelmota/cointop/assets/icon_64x64.png /app/share/icons/hicolor/64x64/apps/com.github.miguelmota.Cointop.png",
-        "cp /app/go/src/github.com/miguelmota/cointop/assets/icon_128x128.png /app/share/icons/hicolor/128x128/apps/com.github.miguelmota.Cointop.png",
-        "cp /app/go/src/github.com/miguelmota/cointop/com.github.miguelmota.Cointop.appdata.xml /app/share/metainfo/com.github.miguelmota.Cointop.appdata.xml",
-        "cp /app/go/src/github.com/miguelmota/cointop/com.github.miguelmota.Cointop.desktop /app/share/applications/com.github.miguelmota.Cointop.desktop"
+        "cp /app/go/src/github.com/cointop-sh/cointop/assets/icon_64x64.png /app/share/icons/hicolor/64x64/apps/com.github.miguelmota.Cointop.png",
+        "cp /app/go/src/github.com/cointop-sh/cointop/assets/icon_128x128.png /app/share/icons/hicolor/128x128/apps/com.github.miguelmota.Cointop.png",
+        "cp /app/go/src/github.com/cointop-sh/cointop/com.github.miguelmota.Cointop.appdata.xml /app/share/metainfo/com.github.miguelmota.Cointop.appdata.xml",
+        "cp /app/go/src/github.com/cointop-sh/cointop/com.github.miguelmota.Cointop.desktop /app/share/applications/com.github.miguelmota.Cointop.desktop"
       ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/miguelmota/cointop/archive/v1.6.5.tar.gz",
-          "sha256": "87c1e9f1dfb6de83b3ea0fc4ae90b35328772f6d841f70ae95800028f3dfd45a",
-          "dest": "go/src/github.com/miguelmota/cointop"
+          "url": "https://github.com/cointop-sh/cointop/archive/v1.6.10.tar.gz",
+          "sha256": "18da0d25288deec7156ddd1d6923960968ab4adcdc917f85726b97d555d9b1b7",
+          "dest": "go/src/github.com/cointop-sh/cointop"
         },
         { "type": "file",
           "path": "com.github.miguelmota.Cointop.appdata.xml",
-          "dest": "go/src/github.com/miguelmota/cointop"
+          "dest": "go/src/github.com/cointop-sh/cointop"
         },
         { "type": "file",
           "path": "com.github.miguelmota.Cointop.desktop",
-          "dest": "go/src/github.com/miguelmota/cointop"
+          "dest": "go/src/github.com/cointop-sh/cointop"
         }
       ]
     }
